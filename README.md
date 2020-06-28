@@ -74,6 +74,11 @@ If you only need the Python bindings of Pinocchio, you may prefer to install it 
 
 **Pinocchio** is also deployed on ROS, you may follow its deployment status on [Melodic](https://index.ros.org/r/pinocchio/#melodic) or [Kinetic](https://index.ros.org/r/pinocchio/#kinetic).
 
+**Additional cmake notes:**
+If a specific python version is used, add for example -DPYTHON_EXECUTABLE=$(which python3). If there are trouble finding right BOOST, try -DBoost_NO_BOOST_CMAKE=ON. Here is an example
+
+    cmake .. -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/opt/openrobots -DPYTHON_EXECUTABLE=$(which 
+
 ## Documentation
 
 The online **Pinocchio** documentation of the last release is available [here](https://gepettoweb.laas.fr/doc/stack-of-tasks/pinocchio/master/doxygen-html/).
